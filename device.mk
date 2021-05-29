@@ -27,6 +27,7 @@ else
 endif
 
 PRODUCT_COPY_FILES += $(LOCAL_KERNEL):kernel
+PRODUCT_VENDOR_KERNEL_HEADERS := $(LOCAL_PATH)/kernel-headers
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \

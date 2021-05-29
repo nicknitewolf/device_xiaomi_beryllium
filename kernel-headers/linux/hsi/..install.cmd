@@ -1,0 +1,1 @@
+cmd_test/include/linux/hsi/.install := /bin/bash scripts/headers_install.sh test/include/linux/hsi ./include/uapi/linux/hsi cs-protocol.h hsi_char.h; /bin/bash scripts/headers_install.sh test/include/linux/hsi ./include/generated/uapi/linux/hsi ; for F in ; do echo "$(pound)include <asm-generic/$$F>" > test/include/linux/hsi/$$F; done; touch test/include/linux/hsi/.install

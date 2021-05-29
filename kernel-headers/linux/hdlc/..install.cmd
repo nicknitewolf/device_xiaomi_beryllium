@@ -1,0 +1,1 @@
+cmd_test/include/linux/hdlc/.install := /bin/bash scripts/headers_install.sh test/include/linux/hdlc ./include/uapi/linux/hdlc ioctl.h; /bin/bash scripts/headers_install.sh test/include/linux/hdlc ./include/generated/uapi/linux/hdlc ; for F in ; do echo "$(pound)include <asm-generic/$$F>" > test/include/linux/hdlc/$$F; done; touch test/include/linux/hdlc/.install
