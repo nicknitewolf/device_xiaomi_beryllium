@@ -19,6 +19,15 @@ PRODUCT_PACKAGES += \
     libqcomfm_jni \
     qcom.fmradio
 
+# Kernel
+ifeq ($(TARGET_PREBUILT_KERNEL),)
+    LOCAL_KERNEL := $(LOCAL_PATH)/Image.gz-dtb
+else
+    LOCAL_KERNEL := $(TARGET_PREBUILT_KERNEL)
+endif
+
+PRODUCT_COPY_FILES += $(LOCAL_KERNEL):kernel
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
