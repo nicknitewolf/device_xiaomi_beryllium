@@ -1,1 +1,0 @@
-cmd_test/include/linux/caif/.install := /bin/bash scripts/headers_install.sh test/include/linux/caif ./include/uapi/linux/caif caif_socket.h if_caif.h; /bin/bash scripts/headers_install.sh test/include/linux/caif ./include/generated/uapi/linux/caif ; for F in ; do echo "$(pound)include <asm-generic/$$F>" > test/include/linux/caif/$$F; done; touch test/include/linux/caif/.install

@@ -1,1 +1,0 @@
-cmd_test/include/linux/raid/.install := /bin/bash scripts/headers_install.sh test/include/linux/raid ./include/uapi/linux/raid md_p.h md_u.h; /bin/bash scripts/headers_install.sh test/include/linux/raid ./include/generated/uapi/linux/raid ; for F in ; do echo "$(pound)include <asm-generic/$$F>" > test/include/linux/raid/$$F; done; touch test/include/linux/raid/.install

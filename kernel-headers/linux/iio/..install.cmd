@@ -1,1 +1,0 @@
-cmd_test/include/linux/iio/.install := /bin/bash scripts/headers_install.sh test/include/linux/iio ./include/uapi/linux/iio events.h types.h; /bin/bash scripts/headers_install.sh test/include/linux/iio ./include/generated/uapi/linux/iio ; for F in ; do echo "$(pound)include <asm-generic/$$F>" > test/include/linux/iio/$$F; done; touch test/include/linux/iio/.install

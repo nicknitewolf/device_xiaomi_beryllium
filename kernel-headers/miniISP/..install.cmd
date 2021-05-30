@@ -1,1 +1,0 @@
-cmd_test/include/miniISP/.install := /bin/bash scripts/headers_install.sh test/include/miniISP ./include/uapi/miniISP miniISP_ioctl.h; /bin/bash scripts/headers_install.sh test/include/miniISP ./include/generated/uapi/miniISP ; for F in ; do echo "$(pound)include <asm-generic/$$F>" > test/include/miniISP/$$F; done; touch test/include/miniISP/.install
